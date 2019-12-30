@@ -38,6 +38,9 @@
 		D7168A1023B9E69700C8E2ED /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A0F23B9E69700C8E2ED /* Employee.swift */; };
 		D7168A1223B9E73700C8E2ED /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A1123B9E73700C8E2ED /* EmployeeModel.swift */; };
 		D7168A1523B9EF0900C8E2ED /* FirebaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A1423B9EF0900C8E2ED /* FirebaseApi.swift */; };
+		D7168A1723BA0AAE00C8E2ED /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A1623BA0AAE00C8E2ED /* ListView.swift */; };
+		D7168A1B23BA0C0E00C8E2ED /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A1923BA0C0E00C8E2ED /* ListTableViewCell.swift */; };
+		D7168A1C23BA0C0E00C8E2ED /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7168A1A23BA0C0E00C8E2ED /* ListTableViewCell.xib */; };
 		F50525EEE189FFA8774BF783 /* Pods_CheckInApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833879A2C2C2E5C32782F8FB /* Pods_CheckInApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,9 @@
 		D7168A0F23B9E69700C8E2ED /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		D7168A1123B9E73700C8E2ED /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
 		D7168A1423B9EF0900C8E2ED /* FirebaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseApi.swift; sourceTree = "<group>"; };
+		D7168A1623BA0AAE00C8E2ED /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		D7168A1923BA0C0E00C8E2ED /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		D7168A1A23BA0C0E00C8E2ED /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +127,14 @@
 		D71689BE23B9D4C300C8E2ED /* CheckInApp */ = {
 			isa = PBXGroup;
 			children = (
+				D7168A1823BA0BEE00C8E2ED /* View */,
 				D7168A1323B9EEEA00C8E2ED /* Api */,
 				D7168A0E23B9E66800C8E2ED /* Model */,
 				D7168A0823B9E03100C8E2ED /* Libs */,
 				D71689D923B9DE3500C8E2ED /* Extension */,
 				D71689BF23B9D4C300C8E2ED /* AppDelegate.swift */,
 				D71689C123B9D4C300C8E2ED /* SceneDelegate.swift */,
+				D7168A1623BA0AAE00C8E2ED /* ListView.swift */,
 				D71689C323B9D4C300C8E2ED /* ViewController.swift */,
 				D71689C523B9D4C300C8E2ED /* Main.storyboard */,
 				D71689C823B9D4C700C8E2ED /* Assets.xcassets */,
@@ -195,6 +203,15 @@
 				D7168A1423B9EF0900C8E2ED /* FirebaseApi.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		D7168A1823BA0BEE00C8E2ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7168A1923BA0C0E00C8E2ED /* ListTableViewCell.swift */,
+				D7168A1A23BA0C0E00C8E2ED /* ListTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E429FB068514C53B097F62E3 /* Pods */ = {
@@ -270,6 +287,7 @@
 				D71689D423B9D7F600C8E2ED /* GoogleService-Info.plist in Resources */,
 				D71689C923B9D4C700C8E2ED /* Assets.xcassets in Resources */,
 				D71689C723B9D4C300C8E2ED /* Main.storyboard in Resources */,
+				D7168A1C23BA0C0E00C8E2ED /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D71689C423B9D4C300C8E2ED /* ViewController.swift in Sources */,
+				D7168A1B23BA0C0E00C8E2ED /* ListTableViewCell.swift in Sources */,
 				D71689FE23B9DE3500C8E2ED /* UIViewControllerExtensions.swift in Sources */,
 				D71689F123B9DE3500C8E2ED /* UIButtonExtension.swift in Sources */,
 				D7168A1223B9E73700C8E2ED /* EmployeeModel.swift in Sources */,
@@ -346,6 +365,7 @@
 				D7168A1523B9EF0900C8E2ED /* FirebaseApi.swift in Sources */,
 				D71689C223B9D4C300C8E2ED /* SceneDelegate.swift in Sources */,
 				D71689FB23B9DE3500C8E2ED /* CGFloatExtension.swift in Sources */,
+				D7168A1723BA0AAE00C8E2ED /* ListView.swift in Sources */,
 				D71689FA23B9DE3500C8E2ED /* DataExtensions.swift in Sources */,
 				D71689F323B9DE3500C8E2ED /* UIScrollViewExtensions.swift in Sources */,
 				D71689F823B9DE3500C8E2ED /* CGPointExtension.swift in Sources */,

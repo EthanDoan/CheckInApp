@@ -11,5 +11,4 @@ import Firebase
 
 class EmployeeModel: NSObject {
     var listEmployee: [Employee] = [Employee]()
-    
 }
