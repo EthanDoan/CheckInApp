@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let scanBarBtn = UIBarButtonItem(title: "SCAN", style: .plain, target: self, action: #selector(scanQRcode(_:)))
+        self.navigationItem.leftBarButtonItem  = scanBarBtn
+        
+    }
+    
+    @IBAction func scanQRcode(_ sender: UIBarButtonItem) {
+        print("scanQRcode")
     }
 
 
