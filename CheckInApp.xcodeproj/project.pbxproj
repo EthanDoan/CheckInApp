@@ -35,6 +35,9 @@
 		D7168A0723B9DE3500C8E2ED /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71689F023B9DE3500C8E2ED /* UIImageViewExtensions.swift */; };
 		D7168A0C23B9E03200C8E2ED /* PHAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A0A23B9E03100C8E2ED /* PHAlertController.swift */; };
 		D7168A0D23B9E03200C8E2ED /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A0B23B9E03100C8E2ED /* SweetAlert.swift */; };
+		D7168A1023B9E69700C8E2ED /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A0F23B9E69700C8E2ED /* Employee.swift */; };
+		D7168A1223B9E73700C8E2ED /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A1123B9E73700C8E2ED /* EmployeeModel.swift */; };
+		D7168A1523B9EF0900C8E2ED /* FirebaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7168A1423B9EF0900C8E2ED /* FirebaseApi.swift */; };
 		F50525EEE189FFA8774BF783 /* Pods_CheckInApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833879A2C2C2E5C32782F8FB /* Pods_CheckInApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,9 @@
 		D71689F023B9DE3500C8E2ED /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		D7168A0A23B9E03100C8E2ED /* PHAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAlertController.swift; sourceTree = "<group>"; };
 		D7168A0B23B9E03100C8E2ED /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		D7168A0F23B9E69700C8E2ED /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		D7168A1123B9E73700C8E2ED /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
+		D7168A1423B9EF0900C8E2ED /* FirebaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 		D71689BE23B9D4C300C8E2ED /* CheckInApp */ = {
 			isa = PBXGroup;
 			children = (
+				D7168A1323B9EEEA00C8E2ED /* Api */,
+				D7168A0E23B9E66800C8E2ED /* Model */,
 				D7168A0823B9E03100C8E2ED /* Libs */,
 				D71689D923B9DE3500C8E2ED /* Extension */,
 				D71689BF23B9D4C300C8E2ED /* AppDelegate.swift */,
@@ -170,6 +178,23 @@
 				D7168A0B23B9E03100C8E2ED /* SweetAlert.swift */,
 			);
 			path = PHAlert;
+			sourceTree = "<group>";
+		};
+		D7168A0E23B9E66800C8E2ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7168A0F23B9E69700C8E2ED /* Employee.swift */,
+				D7168A1123B9E73700C8E2ED /* EmployeeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7168A1323B9EEEA00C8E2ED /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				D7168A1423B9EF0900C8E2ED /* FirebaseApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		E429FB068514C53B097F62E3 /* Pods */ = {
@@ -300,6 +325,7 @@
 				D71689C423B9D4C300C8E2ED /* ViewController.swift in Sources */,
 				D71689FE23B9DE3500C8E2ED /* UIViewControllerExtensions.swift in Sources */,
 				D71689F123B9DE3500C8E2ED /* UIButtonExtension.swift in Sources */,
+				D7168A1223B9E73700C8E2ED /* EmployeeModel.swift in Sources */,
 				D71689F723B9DE3500C8E2ED /* CGSizeExtension.swift in Sources */,
 				D7168A0123B9DE3500C8E2ED /* CGRectExtension.swift in Sources */,
 				D7168A0723B9DE3500C8E2ED /* UIImageViewExtensions.swift in Sources */,
@@ -315,7 +341,9 @@
 				D7168A0023B9DE3500C8E2ED /* UIViewExtensions.swift in Sources */,
 				D71689F523B9DE3500C8E2ED /* ArrayExtension.swift in Sources */,
 				D7168A0C23B9E03200C8E2ED /* PHAlertController.swift in Sources */,
+				D7168A1023B9E69700C8E2ED /* Employee.swift in Sources */,
 				D71689C023B9D4C300C8E2ED /* AppDelegate.swift in Sources */,
+				D7168A1523B9EF0900C8E2ED /* FirebaseApi.swift in Sources */,
 				D71689C223B9D4C300C8E2ED /* SceneDelegate.swift in Sources */,
 				D71689FB23B9DE3500C8E2ED /* CGFloatExtension.swift in Sources */,
 				D71689FA23B9DE3500C8E2ED /* DataExtensions.swift in Sources */,
