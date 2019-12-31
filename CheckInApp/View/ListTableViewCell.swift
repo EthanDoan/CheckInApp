@@ -14,18 +14,19 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet weak var indexLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func loadCell(name: String, position: String, id: String, time: String) {
+    func loadCell(name: String, position: String, id: String, time: String, index: Int) {
         nameLabel.text = name
         positionLabel.text = position
         idLabel.text = id
         timeLabel.text = time
+        indexLabel.text = "\(index)."
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

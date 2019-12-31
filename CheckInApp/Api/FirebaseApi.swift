@@ -15,9 +15,10 @@ class FirebaseApi: NSObject {
         var updateRef: DatabaseReference!
         updateRef = Database.database().reference().child("users/\(key)")
         updateRef.observeSingleEvent(of: DataEventType.value) { (snapshot) in
+            let name = value["username"] as! String
             if snapshot.exists() {
                 DispatchQueue.main.async {
-                    PHAlert.showErrorAlert("employee is already exist")
+                    PHAlert.showErrorAlert("\(name) đã có trong danh sách!")
                 }
                 return
             }
@@ -26,7 +27,7 @@ class FirebaseApi: NSObject {
                     return
                 }
                 DispatchQueue.main.async {
-                    PHAlert.showSuccessAlert("add new employee success")
+                    PHAlert.showSuccessAlert("Welcome \(name)!")
                 }
             }
         }
