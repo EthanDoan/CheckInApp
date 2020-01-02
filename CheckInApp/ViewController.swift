@@ -33,18 +33,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         view.backgroundColor = .white
         let scanBarBtn = UIBarButtonItem(title: "SCAN", style: .plain, target: self, action: #selector(scanQRcode(_:)))
         self.navigationItem.leftBarButtonItem  = scanBarBtn
         
         FirebaseApi.getList { (list) in
-            self.listView = ListView(data: list!)
-            self.view.addSubview(self.listView)
-            self.listView.snp.makeConstraints { (make) in
-                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
-                make.left.equalTo(self.view.snp.left)
-                make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-                make.right.equalTo(self.view.snp.right)
+            if let results = list {
+                self.listView = ListView(data: results)
+                self.view.addSubview(self.listView)
+                self.listView.snp.makeConstraints { (make) in
+                    make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+                    make.left.equalTo(self.view.snp.left)
+                    make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+                    make.right.equalTo(self.view.snp.right)
+                }
             }
         }
     }

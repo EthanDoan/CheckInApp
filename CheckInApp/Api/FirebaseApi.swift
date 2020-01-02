@@ -39,17 +39,21 @@ class FirebaseApi: NSObject {
         var ref: DatabaseReference!
         ref = Database.database().reference().child("users")
         ref.observe(DataEventType.value) { (snapshot) in
-            let array = snapshot.value as! [String:Any]
-            let compactMap = array.compactMap({ $0.1 as? [String:String]})
-            let result = compactMap.map { (dict) -> Employee in
-                return Employee(userId: dict["id"]!, username: dict["username"]!, info: dict["info"]!, checkInTime: dict["checkintime"]!)
+            if snapshot.exists() {
+                let array = snapshot.value as! [String:Any]
+                let compactMap = array.compactMap({ $0.1 as? [String:String]})
+                let result = compactMap.map { (dict) -> Employee in
+                    return Employee(userId: dict["id"]!, username: dict["username"]!, info: dict["info"]!, checkInTime: dict["checkintime"]!)
+                }
+                completion(result)
+                return
             }
-            completion(result)
+            completion(nil)
         }
     }
     
     class func beep() {
-        let systemSoundID: SystemSoundID = 1029
+        let systemSoundID: SystemSoundID = 1014
 //        AudioServicesPlaySystemSound (systemSoundID)
         AudioServicesPlayAlertSoundWithCompletion(systemSoundID) {
             
