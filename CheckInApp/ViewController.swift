@@ -57,7 +57,6 @@ class ViewController: UIViewController {
         readerVC.completionBlock = { (result: QRCodeReaderResult?) in
           if let result = result {
             let array = result.value.components(separatedBy: "-")
-            print("\(array)")
             let obj = self.mapArrayToObject(components: array)
             FirebaseApi.update(value: obj.1, forKey: obj.0)
           }
@@ -72,19 +71,20 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func mapArrayToObject(components: [String]) -> (String,[String:Any]) {
-        let key = components[1]
-        
         var object = [String:Any]()
 
+        let slice = components.suffix(from: 2)
+        let infoText = slice.joined(separator: " - ")
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
         let dateString = dateFormatter.string(from: Date())
         
         object.updateValue(components[0], forKey: "username")
         object.updateValue(components[1], forKey: "id")
-        object.updateValue(components[2], forKey: "info")
+        object.updateValue(infoText, forKey: "info")
         object.updateValue(dateString, forKey: "checkintime")
-        return (key, object)
+        return (components[1], object)
     }
     
     private func checkScanPermissions() -> Bool {

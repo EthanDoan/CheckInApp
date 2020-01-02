@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saj-wf-vRV">
-                        <rect key="frame" x="42" y="28.5" width="190" height="14"/>
+                        <rect key="frame" x="42" y="28.5" width="238" height="14"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htW-Lc-HHH">
-                        <rect key="frame" x="42" y="46.5" width="190" height="14"/>
+                        <rect key="frame" x="42" y="46.5" width="238" height="14"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -57,13 +57,13 @@
                 <constraints>
                     <constraint firstItem="qFH-uu-s1B" firstAttribute="height" secondItem="djG-9i-ngz" secondAttribute="height" id="23p-vd-9oE"/>
                     <constraint firstItem="djG-9i-ngz" firstAttribute="leading" secondItem="qFH-uu-s1B" secondAttribute="trailing" constant="8" id="3U5-PM-YqU"/>
-                    <constraint firstItem="htW-Lc-HHH" firstAttribute="centerX" secondItem="djG-9i-ngz" secondAttribute="centerX" id="6Ec-i2-BDZ"/>
+                    <constraint firstAttribute="trailing" secondItem="saj-wf-vRV" secondAttribute="trailing" constant="40" id="5Vr-bV-tAb"/>
+                    <constraint firstItem="saj-wf-vRV" firstAttribute="leading" secondItem="djG-9i-ngz" secondAttribute="leading" id="8Uo-Kd-QOP"/>
                     <constraint firstItem="3ZK-SB-Zia" firstAttribute="centerY" secondItem="djG-9i-ngz" secondAttribute="centerY" id="A8R-em-mbf"/>
                     <constraint firstItem="qFH-uu-s1B" firstAttribute="centerY" secondItem="djG-9i-ngz" secondAttribute="centerY" id="CdY-lB-hxT"/>
+                    <constraint firstItem="htW-Lc-HHH" firstAttribute="leading" secondItem="djG-9i-ngz" secondAttribute="leading" id="D1L-lQ-xpZ"/>
                     <constraint firstItem="saj-wf-vRV" firstAttribute="top" secondItem="djG-9i-ngz" secondAttribute="bottom" constant="4" id="Ndl-Dy-CGp"/>
-                    <constraint firstItem="saj-wf-vRV" firstAttribute="width" secondItem="djG-9i-ngz" secondAttribute="width" id="T3P-OM-deB"/>
                     <constraint firstItem="3ZK-SB-Zia" firstAttribute="height" secondItem="djG-9i-ngz" secondAttribute="height" multiplier="1.23529" id="Vcs-vT-dhD"/>
-                    <constraint firstItem="saj-wf-vRV" firstAttribute="centerX" secondItem="djG-9i-ngz" secondAttribute="centerX" id="Yy1-tq-HW8"/>
                     <constraint firstItem="3ZK-SB-Zia" firstAttribute="leading" secondItem="djG-9i-ngz" secondAttribute="trailing" constant="10" id="bHd-Kz-GPs"/>
                     <constraint firstAttribute="trailing" secondItem="3ZK-SB-Zia" secondAttribute="trailing" constant="10" id="cM2-Ac-1wS"/>
                     <constraint firstItem="htW-Lc-HHH" firstAttribute="width" secondItem="saj-wf-vRV" secondAttribute="width" id="pJy-Ah-vqx"/>

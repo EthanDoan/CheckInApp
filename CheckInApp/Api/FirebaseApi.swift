@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import AVFoundation
 
 class FirebaseApi: NSObject {
     
@@ -27,6 +28,7 @@ class FirebaseApi: NSObject {
                     return
                 }
                 DispatchQueue.main.async {
+                    FirebaseApi.beep()
                     PHAlert.showSuccessAlert("Welcome \(name)!")
                 }
             }
@@ -43,6 +45,14 @@ class FirebaseApi: NSObject {
                 return Employee(userId: dict["id"]!, username: dict["username"]!, info: dict["info"]!, checkInTime: dict["checkintime"]!)
             }
             completion(result)
+        }
+    }
+    
+    class func beep() {
+        let systemSoundID: SystemSoundID = 1029
+//        AudioServicesPlaySystemSound (systemSoundID)
+        AudioServicesPlayAlertSoundWithCompletion(systemSoundID) {
+            
         }
     }
 }
