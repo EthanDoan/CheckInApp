@@ -56,12 +56,34 @@ class ViewController: UIViewController {
     @IBAction func scanQRcode(_ sender: UIBarButtonItem) {
         guard checkScanPermissions() else { return }
         readerVC.modalPresentationStyle = .fullScreen
-        readerVC.delegate               = self
+        readerVC.delegate = self
         readerVC.completionBlock = { (result: QRCodeReaderResult?) in
           if let result = result {
-            let array = result.value.components(separatedBy: "-")
+            
+            let resultString = result.value
+            
+            let array = resultString.components(separatedBy: "-")
+            if array.count <= 3 {
+                DispatchQueue.main.async {
+                    PHAlert.showErrorAlert("Wrong QR code format")
+                }
+                return
+            }
+            
             let obj = self.mapArrayToObject(components: array)
-            FirebaseApi.update(value: obj.1, forKey: obj.0)
+
+            //check invite list
+            FirebaseApi.getListToCompare { (arrayObjects) in
+                let filter = arrayObjects.filter({ $0["code"] as! String == obj.0 })
+                if filter.count > 0 {
+                    //update to guest list
+                    FirebaseApi.update(value: obj.1, forKey: obj.0)
+                } else {
+                    DispatchQueue.main.async {
+                        PHAlert.showErrorAlert("\(obj.1) không có trong danh sách khách mời!")
+                    }
+                }
+            }
           }
         }
 

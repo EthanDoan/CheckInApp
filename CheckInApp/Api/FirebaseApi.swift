@@ -52,6 +52,15 @@ class FirebaseApi: NSObject {
         }
     }
     
+    class func getListToCompare(completion: @escaping (_ inviteList: Array<[String:Any]>) -> Void) {
+        var ref: DatabaseReference!
+        ref = Database.database().reference().child("employees")
+        ref.observeSingleEvent(of: DataEventType.value) { (snapshot) in
+            let array = snapshot.value as! Array<[String:Any]>
+            completion(array)
+        }
+    }
+    
     class func beep() {
         let systemSoundID: SystemSoundID = 1014
 //        AudioServicesPlaySystemSound (systemSoundID)
