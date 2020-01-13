@@ -76,18 +76,18 @@ extension ViewController {
     func mapArrayToObject(components: [String]) -> (String,[String:Any]) {
         var object = [String:Any]()
 
-        let slice = components.suffix(from: 2)
+        let slice = components.suffix(from: 3)
         let infoText = slice.joined(separator: " - ")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
         let dateString = dateFormatter.string(from: Date())
         
-        object.updateValue(components[0], forKey: "username")
-        object.updateValue(components[1], forKey: "id")
+        object.updateValue(components[1], forKey: "username")
+        object.updateValue(components[2], forKey: "id")
         object.updateValue(infoText, forKey: "info")
         object.updateValue(dateString, forKey: "checkintime")
-        return (components[1], object)
+        return (components[2], object)
     }
     
     private func checkScanPermissions() -> Bool {
